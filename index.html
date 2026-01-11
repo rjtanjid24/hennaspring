@@ -6,21 +6,17 @@
     <title>Henna Spring | Organic Henna Shop</title>
     
     <meta name="title" content="Henna Spring | Best Organic Mehedi & Bridal Artist in Gazipur">
-    <meta name="description" content="গাজীপুরের সেরা অর্গানিক ও হালাল মেহেদী শপ। ব্রাইডাল, সেমি-ব্রাইডাল ও পার্টি মেহেদী আর্ট সার্ভিস। শিমুলতলী, জয়দেবপুর ও টঙ্গী এরিয়াতে হোম সার্ভিস এভেইলেবল। 100% Chemical Free Henna.">
-   
+    <meta name="description" content="গাজীপুরের সেরা অর্গানিক ও হালাল মেহেদী শপ। ব্রাইডাল, সেমি-ব্রাইডাল ও পার্টি মেহেদী আর্ট সার্ভিস। শিমুলতলী, জয়দেবপুর ও টঙ্গী এরিয়াতে হোম সার্ভিস এভেইলেবল।">
     <meta name="keywords" content="Henna Spring, Organic Henna, Mehedi Artist Gazipur, Bridal Mehendi, Organic Mehedi Cones, Henna Artist Joydebpur, Shimultoly Mehedi, Rajendrapur Henna, Kapasia, BOF Gazipur, Tongi Mehendi Artist, Halal Henna, Nail Tint, Bangladesh">
-    
     <meta name="author" content="RJ Tanjid (RST Multimedia)">
     <meta name="developer" content="RJ Tanjid">
+    
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hennaspring.com/"> <meta property="og:title" content="Henna Spring - Organic Henna & Art">
+    <meta property="og:url" content="https://hennaspring.com/">
+    <meta property="og:title" content="Henna Spring - Organic Henna & Art">
     <meta property="og:description" content="অর্গানিক মেহেদী কিনুন অথবা ব্রাইডাল বুকিং দিন। গাজীপুরের সেরা মেহেদী আর্টিস্ট এখন আপনার হাতের মুঠোয়।">
-    <meta property="og:image" content="images/og-image.jpg"> <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Henna Spring | Gazipur">
-    <meta property="twitter:description" content="Order Organic Henna Cones & Book Bridal Mehedi slots in Gazipur.">
-    <meta property="twitter:image" content="images/og-image.jpg">
+    <meta property="og:image" content="images/og-image.jpg">
 
-    <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -72,10 +68,13 @@
 
         /* --- Navbar --- */
         .navbar { background: #fff; padding: 15px 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #e8f5e9; box-shadow: 0 2px 5px rgba(0,0,0,0.03); }
-        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; position: relative; }
         .logo { font-size: 26px; font-weight: 700; color: var(--primary-color); }
         .nav-links a { text-decoration: none; color: var(--text-dark); margin-left: 20px; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover { color: var(--cta-color); }
+        
+        /* Hamburger Menu (Hidden on Desktop) */
+        .hamburger { display: none; font-size: 24px; cursor: pointer; color: var(--primary-color); }
 
         /* --- Hero Section --- */
         .hero { background: linear-gradient(135deg, #e8f5e9 0%, #fff 100%); padding: 60px 0; }
@@ -189,8 +188,12 @@
         .service-tags-footer { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 250px; margin: 0 auto; }
         .s-tag { background: #222; padding: 5px 12px; border-radius: 4px; font-size: 13px; color: #ccc; border: 1px solid #333; transition: 0.3s; cursor: default; }
         .s-tag:hover { border-color: var(--accent-gold); color: #fff; }
+        
+        /* Footer Copyright */
+        .copyright-area { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #333; font-size: 13px; color: #ccc; }
+        .separator { margin: 0 5px; opacity: 0.5; }
 
-        /* --- Modal & Responsive --- */
+        /* --- Modal --- */
         .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 9999; justify-content: center; align-items: center; backdrop-filter: blur(2px); }
         .modal-box { background: #fff; padding: 25px; border-radius: 12px; width: 90%; max-width: 350px; text-align: center; position: relative; box-shadow: 0 10px 25px rgba(0,0,0,0.2); animation: popUp 0.3s ease-out; border-top: 5px solid #e2136e; }
         @keyframes popUp { from { transform: scale(0.8); opacity: 0; } to { opacity: 1; } }
@@ -203,6 +206,7 @@
         .btn-popup { background: #2d6a4f; color: white; border: none; padding: 8px 25px; border-radius: 5px; margin-top: 15px; cursor: pointer; font-weight: bold; }
         .btn-popup:hover { background: #1b4332; }
 
+        /* --- Mobile Responsive (Max Width 992px) --- */
         @media (max-width: 992px) {
             .visual-grid { grid-template-columns: 1fr; }
             .video-col { order: 1; margin-bottom: 30px; }
@@ -210,9 +214,35 @@
             .gallery-img-side { height: 200px; }
             .form-grid { grid-template-columns: 1fr; gap: 30px; }
             .hero-text h1 { font-size: 32px; }
-            .nav-links { display: none; }
+            
+            /* Navbar & Hamburger */
+            .hamburger { display: block; margin-right: 10px; }
+            .nav-links { 
+                display: none; 
+                position: absolute; 
+                top: 100%; left: 0; 
+                width: 100%; 
+                background: #fff; 
+                flex-direction: column; 
+                padding: 20px; 
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+                text-align: center;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { margin: 10px 0; display: block; }
+            .btn-brand { margin: 10px auto; }
+            
             .delivery-row { flex-direction: column; gap: 10px; }
             .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            
+            /* Footer Specifics for Mobile */
+            .address-text br { display: none; } /* Hide Line break on mobile */
+            .service-tags-footer { justify-content: center; gap: 5px; }
+            .s-tag { font-size: 12px; padding: 4px 8px; }
+            
+            /* Copyright Split */
+            .separator { display: none; } /* Hide | separator */
+            .copyright-area a { display: block; margin-top: 5px; } /* Break line for credit */
         }
     </style>
 </head>
@@ -223,11 +253,16 @@
     <nav class="navbar">
         <div class="container nav-content">
             <div class="logo">Henna Spring<span style="color: #e63946;">.</span></div>
-            <div class="nav-links">
-                <a href="#home">হোম</a>
-                <a href="#info">টিপস</a>
-                <a href="#service">বুকিং</a>
-                <a href="#order" class="btn btn-brand" style="margin-left: 10px; color: #ffffff !important;">অর্ডার করুন</a>
+            
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="nav-links" id="mobile-menu">
+                <a href="#home" onclick="toggleMenu()">হোম</a>
+                <a href="#info" onclick="toggleMenu()">টিপস</a>
+                <a href="#service" onclick="toggleMenu()">বুকিং</a>
+                <a href="#order" class="btn btn-brand" onclick="toggleMenu()" style="margin-left: 10px; color: #ffffff !important;">অর্ডার করুন</a>
             </div>
         </div>
     </nav>
@@ -415,7 +450,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>মোবাইল নাম্বার</label>
-                                    <input type="tel" id="c-phone" placeholder="013xxxxxxxx" required>
+                                    <input type="tel" id="c-phone" placeholder="017xxxxxxxx" pattern="01[3-9][0-9]{8}" maxlength="11" required title="১১ ডিজিটের সঠিক মোবাইল নম্বর লিখুন (013... থেকে 019...)">
                                 </div>
                                 <div class="form-group">
                                     <label>ডেলিভারি এরিয়া (সিলেক্ট করুন)</label>
@@ -529,7 +564,7 @@
                                 </table>
 
                                 <button type="submit" id="submit-btn" class="order-btn" disabled>
-                                    অর্ডার কনফার্ম করুন
+                                    অর্ডার কনফার্ম করুন <i class="fas fa-check"></i>
                                 </button>
                             </div>
                         </div>
@@ -545,7 +580,7 @@
                 <div class="footer-col">
                     <h4>হেনা স্প্রিং</h4>
                     <p class="address-text">
-                        ঠিকানা: শিমুলতলী,<br>
+                        ঠিকানা: শিমুলতলী, <br>
                         জয়দেবপুর, গাজীপুর
                     </p>
                 </div>
@@ -566,11 +601,11 @@
                     </div>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #333; font-size: 13px; color: #ccc;">
+            
+            <div class="copyright-area">
                 &copy; 2026 Henna Spring. All rights reserved. 
-                <span style="margin: 0 5px; opacity: 0.5;">|</span> 
-                Design & Develop by: 
-                <a href="https://www.facebook.com/rst.multimedia.net" target="_blank" style="color: #d4a373; text-decoration: none; font-weight: 600;">RST Multimedia</a>
+                <span class="separator">|</span> 
+                <a href="https://www.facebook.com/rst.multimedia.net" target="_blank" style="color: #d4a373; text-decoration: none; font-weight: 600;">Design & Develop by: RST Multimedia</a>
             </div>
         </div>
     </footer>
@@ -608,6 +643,16 @@
 </div>
 
 <script>
+    // Toggle Mobile Menu
+    function toggleMenu() {
+        const nav = document.getElementById('mobile-menu');
+        if (nav.style.display === "flex") {
+            nav.style.display = "none";
+        } else {
+            nav.style.display = "flex";
+        }
+    }
+
     // Product Configuration
     const products = {
         p1: { regular: 110, wholesale: 70 },
@@ -706,6 +751,17 @@
         let trx = document.getElementById('c-trx').value;
         let note = document.getElementById('c-note').value;
         
+        // Phone Validation (11 Digits, 013-019)
+        const bdPhoneRegex = /^01[3-9][0-9]{8}$/;
+        if (!bdPhoneRegex.test(phone)) {
+            alert("দয়া করে সঠিক ১১ ডিজিটের মোবাইল নম্বর দিন!\n(নম্বরটি অবশ্যই 013... থেকে 019... এর মধ্যে হতে হবে)");
+            document.getElementById('c-phone').style.borderColor = "red";
+            document.getElementById('c-phone').focus();
+            return; 
+        } else {
+            document.getElementById('c-phone').style.borderColor = "#ddd";
+        }
+
         // Payment Method
         let paymentMethod = document.querySelector('input[name="payment"]:checked').value;
         let paymentText = (paymentMethod === 'cod') ? 'ক্যাশ অন ডেলিভারি' : 'বিকাশ (সেন্ড মানি)';
@@ -729,10 +785,10 @@
         let total = document.getElementById('grand-total').innerText;
 
         // WhatsApp Message Format
-        let message = `*New Order* \n-----------------------------\n *নাম:* ${name}\n *ফোন:* ${phone}\n *ঠিকানা:* ${address}\n *TrxID:* ${trx ? trx : 'N/A'}\n *নোট:* ${note ? note : 'নেই'}\n-----------------------------\n *অর্ডার ডিটেইলস:*\n${productDetails}-----------------------------\n সাব-টোটাল: ${subtotal}\n ডেলিভারি চার্জ: ${delivery}\n *সর্বমোট বিল:* ${total}\n পেমেন্ট: ${paymentText}\n-----------------------------`;
+        let message = `*নতুন অর্ডার এসেছে! (Henna Spring)* 🎉\n-----------------------------\n👤 *নাম:* ${name}\n📞 *ফোন:* ${phone}\n🏠 *ঠিকানা:* ${address}\n💸 *TrxID:* ${trx ? trx : 'N/A'}\n📝 *নোট:* ${note ? note : 'নেই'}\n-----------------------------\n📦 *অর্ডার ডিটেইলস:*\n${productDetails}-----------------------------\n💰 সাব-টোটাল: ${subtotal}\n🚚 ডেলিভারি চার্জ: ${delivery}\n💵 *সর্বমোট বিল:* ${total}\n💳 পেমেন্ট: ${paymentText}\n-----------------------------`;
 
         // Send to WhatsApp
-        let myNumber = "8801859875265"; 
+        let myNumber = "8801330975378"; 
         let url = "https://wa.me/" + myNumber + "?text=" + encodeURIComponent(message);
         window.open(url, '_blank').focus();
     }
@@ -747,7 +803,6 @@
             let currentTotal = document.getElementById('grand-total').innerText;
             if(currentTotal == '0') {
                 alert('দয়া করে আগে প্রোডাক্ট সিলেক্ট করুন!');
-                // Revert to COD visually if no product selected
                 document.getElementById('pay-cod').click(); 
                 return;
             }
